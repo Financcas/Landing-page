@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background: white;
+}
+
+main {
+  padding: 30px 60px;
+}
+
+header {
+  width: 100%;
+}
+
+header img {
+  width: 60px;
+}
+
+.banner {
+  width: 100%;
+}
+
+.banner .banner-description {
+  max-width: 60%;
+  padding-top: 20px;
+}
+
+.banner .banner-description h1 {
+  font-size: 45px;
+  color: #212121;
+  line-height: 1.3;
+  font-weight: 900;
+}
+
+.banner .banner-description p {
+  color: #868585;
+  line-height: 1.6;
+  max-width: 60%;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.banner img {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 50%;
+  z-index: 0;
+}
+
+.banner form {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  gap: 5px;
+  z-index: 10;
+}
+
+.banner form input::placeholder {
+  color: #aaaaaa;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.banner form input {
+  width: inherit;
+  height: 70px;
+  border-style: none;
+  padding: 0 40px;
+  outline: none;
+  background: white;
+  border-radius: 40px;
+  -webkit-box-shadow: -1px -1px 58px -15px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: -1px -1px 58px -15px rgba(0, 0, 0, 0.13);
+  box-shadow: -1px -1px 58px -15px rgba(0, 0, 0, 0.13);
+  color: #212121;
+  font-size: 14px;
+}
+
+form button {
+  width: 130px;
+  height: 68px;
+  padding: 0 40px;
+  background: #7E0ACA;
+  text-align: center;
+  outline: none;
+  border-style: none;
+  border-radius: 40px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  left: -130px;
+  border: 5px solid white;
+  border-right-width: 8px;
+}
