@@ -5,12 +5,39 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/x-icon">
+
+
+  <meta name="keywords"
+    content="finanças, gestão financeira, controle de gastos, organização financeira, Finanças, Organize sua renda, Organize seus cartões de crédito">
+  <meta name="author" content="Helio Gonzaga Santos Junior">
+  <meta property="og:image" content="./assets/icons/favicon.svg">
+  <meta name="robots" content="max-image-preview:large">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
+
+  <meta property="business:contact_data:country_name" content="Brasil" />
+  <meta property="business:contact_data:website" content="http://financcas.com.br" />
+  <meta property="business:contact_data:region" content="SP" />
+  <meta property="business:contact_data:email" content="contato@financcas.com.br" />
+  <meta property="business:contact_data:phone_number" content="11942637594 />
+
+  <!-- Meta tags para iOS -->
+  <meta name=" apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#7E0ACA">
+
+  <!-- Meta tags para Android -->
+  <meta name="theme-color" content="#7E0ACA">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Meta tags comuns -->
+  <meta property="og:title" content="Finançças | Organize sua vida financeira">
+  <meta property="og:description"
     content="Finançças é uma plataforma para ajudar você a organizar sua vida financeira de forma simples e eficiente. Gerencie suas finanças pessoais, controle seus gastos, defina metas e muito mais.">
+  <meta property="og:url" content="https://financcas.com.br">
+
   <title>Finançças | Organize sua vida financeira</title>
 </head>
 
@@ -36,11 +63,11 @@
     </section>
 
     <section class="themes">
-      <h2>Personalização automática de temas</h2>
+      <h2>Personalização automática de <span class="highlighted">temas</span></h2>
       <p>Seu banco, sua experiência. Com a personalização automática de temas, o Finançças se adapta instantaneamente ao
         seu banco selecionado, proporcionando uma interface familiar e intuitiva</p>
-        
-        <p>* Mais temas disponíveis para sua instituição financeira</p>
+
+      <p>* Mais temas disponíveis para sua instituição financeira</p>
 
       <form class="banks">
         <div class="bank">
@@ -175,7 +202,6 @@
       <h5>Escolha o plano que se encaixa no seu estilo de vida <span class="highlighted">financeira</span></h5>
       <p>Escolha entre nosso plano gratuito e premium para atender às suas necessidades. Estamos aqui para ajudá-lo a
         alcançar seus objetivos financeiros com facilidade</p>
-
       <div class="plans">
         <div>
           <div class="plan-premium">
@@ -311,23 +337,24 @@
                 <img src="./assets/icons/check.svg" alt="Icone mostrando que esse item está na conta premium">
                 <p>Lista de faturas</p>
               </div>
-
-              <div class="list-item gift">
-                <img src="./assets/icons/icon-gift.svg" alt="Icone mostrando um presente para este plano">
-                <p><strong>Temas dinâmicos por conta:</strong> A interface do aplicativo muda automaticamente de acordo
-                  com
-                  a conta bancária
-                  ativa, proporcionando uma experiência visual personalizada</p>
-              </div>
-
             </div>
           </div>
           <p class="info">*No plano gratuito, tenha acesso a um conjunto de funcionalidades básicas.</p>
         </div>
-
-
       </div>
     </section>
+
+    <footer>
+      <div>
+        <span>contato@financcas.com.br</span>
+        <div class="networks">
+          <img title="Instagram Finançças" src="./assets/icons/icon-instagram.svg" alt="Icone do Instagram">
+          <img title="Entre em contato" src="./assets/icons/icon-whatsapp.svg" alt="Icone do WhatsApp">
+        </div>
+
+        <span>©2023 Finançças Tecnologia. Todos os direitos reservados.</span>
+      </div>
+    </footer>
   </main>
 </body>
 
@@ -341,14 +368,12 @@
 
       if (id === image.id) {
         image.classList.add('center');
-        document.querySelector('input[name="themes"][id="' + id + '"]').checked = true; // Check the corresponding radio input
+        document.querySelector('input[name=" themes"][id="' + id + '" ]').checked = true; // Check the corresponding
+        radio input
       }
     }
-  }
-
-  function radioChanged() {
+  } function radioChanged() {
     const inputs = document.querySelectorAll('.bank input');
-
     inputs.forEach(input => {
       if (input.checked) {
         handleImage(input.id);
@@ -358,7 +383,8 @@
 
   function imageClicked(id) {
     handleImage(id);
-    document.querySelector('input[name="themes"][id="' + id + '"]').checked = true; // Check the corresponding radio input
+    document.querySelector('input[name="themes"][id="' + id + '"]').checked = true; // Check the corresponding radio
+    input
   }
 
   const inputs = document.querySelectorAll('.bank input');
