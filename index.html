@@ -35,6 +35,61 @@
       </form>
     </section>
 
+    <section class="themes">
+      <h2>Personalização automática de temas</h2>
+      <p>Seu banco, sua experiência. Com a personalização automática de temas, o Finançças se adapta instantaneamente ao
+        seu banco selecionado, proporcionando uma interface familiar e intuitiva</p>
+        
+        <p>* Mais temas disponíveis para sua instituição financeira</p>
+
+      <form class="banks">
+        <div class="bank">
+          <input checked type="radio" id="default" name="themes">
+          <label for="default">Tema Finançças</label>
+        </div>
+
+        <div class="bank">
+          <input type="radio" id="santander" name="themes">
+          <label for="santander">Banco Santander</label>
+        </div>
+
+        <div class="bank">
+          <input type="radio" id="itau" name="themes">
+          <label for="itau">Banco Itaú</label>
+        </div>
+
+        <div class="bank">
+          <input type="radio" id="next" name="themes">
+          <label for="next">Banco Next</label>
+        </div>
+
+        <div class="bank">
+          <input type="radio" id="bradesco" name="themes">
+          <label for="bradesco">Banco Bradesco</label>
+        </div>
+
+        <div class="bank">
+          <input type="radio" id="inter" name="themes">
+          <label for="inter">Banco Inter</label>
+        </div>
+
+        <div class="bank">
+          <input type="radio" id="c6" name="themes">
+          <label for="c6">Banco C6 Bank</label>
+        </div>
+      </form>
+
+      <div class="images-banks">
+        <img class="center" src="./assets/images/themes/default.svg" alt="Imagem banco Finançças" id="default">
+        <img src="./assets/images/themes/santander.svg" alt="Imagem banco Santander" id="santander">
+        <img src="./assets/images/themes/itau.svg" alt="Imagem banco Itaú" id="itau">
+        <img src="./assets/images/themes/next.svg" alt="Imagem banco Next" id="next">
+        <img src="./assets/images/themes/brandesco.svg" alt="Imagem banco Bradesco" id="bradesco">
+        <img src="./assets/images/themes/inter.svg" alt="Imagem banco Inter" id="inter">
+        <img src="./assets/images/themes/c6.svg" alt="Imagem banco C6" id="c6">
+      </div>
+    </section>
+
     <section class="emphasis">
       <h2>Descomplicando suas <span class="highlighted">finanças</span></h2>
       <p> Liberte-se de apps complexos e planilhas cansativas. Simplifique sua vida financeira com nosso aplicativo
@@ -275,5 +330,47 @@
     </section>
   </main>
 </body>
+
+<script>
+
+  function handleImage(id) {
+    const images = document.querySelectorAll('.images-banks img');
+
+    for (let image of images) {
+      image.classList.remove('center');
+
+      if (id === image.id) {
+        image.classList.add('center');
+        document.querySelector('input[name="themes"][id="' + id + '"]').checked = true; // Check the corresponding radio input
+      }
+    }
+  }
+
+  function radioChanged() {
+    const inputs = document.querySelectorAll('.bank input');
+
+    inputs.forEach(input => {
+      if (input.checked) {
+        handleImage(input.id);
+      }
+    });
+  }
+
+  function imageClicked(id) {
+    handleImage(id);
+    document.querySelector('input[name="themes"][id="' + id + '"]').checked = true; // Check the corresponding radio input
+  }
+
+  const inputs = document.querySelectorAll('.bank input');
+  inputs.forEach(input => {
+    input.addEventListener('change', radioChanged);
+  });
+
+  const images = document.querySelectorAll('.images-banks img');
+  images.forEach(image => {
+    image.addEventListener('click', () => imageClicked(image.id));
+  });
+</script>
+
 
 </html>
